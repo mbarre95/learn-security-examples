@@ -1,1 +1,5 @@
 Briefly explain the vulnerability and why the secure version prevents the vulnerability.
+
+The vulnerability insecure.js lies in user inputs not being sanitized, leaving the application open to attacks. 
+The secure version addresses this issue by allowing a dynamic session secret key and implementing better session 
+security measures, such as setting the httpOnly and sameSite attributes for cookies.

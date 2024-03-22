@@ -1,0 +1,3 @@
+The vulnerability in the insecure version arises from the lack of input sanitization, allowing for potential XSS attacks. 
+The secure version mitigates this risk by properly sanitizing user input, preventing malicious code injection. 
+This vulnerability violates the Integrity property of CIA.

@@ -54,3 +54,8 @@ app.post("/forget", (req, res) => {
 })
 
 app.listen(8000)
+
+function escapeHTML(input)
+ {
+  return input.replace(/&/g, "&amp;").replace(/>/g, )
+ }

@@ -1,0 +1,9 @@
+• Briefly explain the vulnerability and why the secure version prevents the vulnerability.
+The insecure version is vulnerable to privilege escalation attacks. It doesn't incorporate proper authentication. It directly trusts the userId 
+provided in the request body to identify the user and relies solely on checking if the user has an admin role to authorize the role update. 
+The secure version checks whether the user is authenticated by verifying the presence of userId in session and then verifies if the authenticated 
+user has the necessary privileges (admin) to perform the role update. 
+
+• What additional security mechanisms can you incorporate to prevent such attacks?
+Implement input validation to ensure that the userId and newRole values provided in the request body are of the expected format and within 
+acceptable ranges. This helps mitigate injection attacks and ensures that only valid data is processed.

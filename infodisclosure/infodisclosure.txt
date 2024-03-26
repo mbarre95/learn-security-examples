@@ -1,3 +1,8 @@
 Briefly explain the vulnerability and why the secure version prevents the vulnerability.
+The secure version sanitizes user input which the insecure version doesn't. In the insecure version the code directly uses the username 
+value from the request query to perform a database query without any sanitization. This leaves the application vulnerable to NoSQL injection attacks. 
 Which CIA property does tampering violate?
+Tampering violates the integrity aspect of CIA.
 What additional security mechanisms can you incorporate?
+Besides sanitizing input, implementing comprehensive input validation mechanisms to ensure that all user-supplied data meets expected criteria can 
+further reduce the risk of injection attacks.

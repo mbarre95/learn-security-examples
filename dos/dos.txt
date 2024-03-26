@@ -1,2 +1,6 @@
 - Briefly explain the vulnerability and why the secure version prevents the vulnerability.
+vulnerabilities: unsanitized user input, no error handling. The secure version includes a try-catch block to handle 
+potential errors during the database query execution, providing a more informative response in case of an error.
 - What additional security mechanisms can you incorporate to prevent such attacks?
+Besides sanitizing input, implementing comprehensive input validation mechanisms to ensure that all user-supplied data meets expected criteria can 
+further reduce the risk of injection attacks.
